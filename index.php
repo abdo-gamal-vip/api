@@ -1,6 +1,6 @@
 <?php
 $name = $_POST['name'];
-$last = $post['last'];
+$last = $_POST['last'];
 $age = $_POST['age'];
- print_r($_POST);
+ echo $name;
 ?>
