@@ -1,6 +1,6 @@
 <?php
-$name = $_GET['name'];
-$last = $_GET['last'];
-$age = $_GET['age'];
- print_r($_GET);
+$name = $_POST['name'];
+$last = $post['last'];
+$age = $_POST['age'];
+ print_r($_POST);
 ?>
