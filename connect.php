@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:host:localhost;dbname=e_commerce_app";
+$dsn = "mysql:host=localhost;dbname=e_commerce_app";
 $user="root";
 $pass="";
 $oprion=array(

@@ -1,6 +1,7 @@
 <?php
-$name = $_POST['name'];
-$last = $_POST['last'];
-$age = $_POST['age'];
- echo $name;
+include"connect.php";
+$stmt = $conct->prepare("SELECT * FROM items");
+$stmt->execute();
+$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+print_r($items);
 ?>
