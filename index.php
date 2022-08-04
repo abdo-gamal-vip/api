@@ -1,7 +1,10 @@
 <?php
-include"connect.php";
-$stmt = $conct->prepare("SELECT * FROM items");
+include "connect.php";
+$stmt = $conct->prepare("INSERT INTO `items`( `i_name`, `i_categories`, `i_price`) VALUES ('s23 samsung','1','9500')");
 $stmt->execute();
-$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-print_r($items);
+$count = $stmt->rowCount();
+if ($conct > 0 ){
+    echo "error";
+}
+else{echo "sucsses";}
 ?>
