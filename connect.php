@@ -1,5 +1,6 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=e_commerce_app";
+include "functions.php";
+$dsn = "mysql:host=localhost;dbname=notesapp";
 $user="root";
 $pass="";
 $option=array(
@@ -14,4 +15,3 @@ catch(PDOException $e){
     
 }
 ?>
-// Path: connect.php
