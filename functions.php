@@ -7,7 +7,7 @@ function filterRequest ($requestname){
 }
 function imageUpload ($imgRequset){
   global $errorMsg;
-  $imagename = $_FILES[$imgRequset]['name'];
+  $imagename = rand(10,10000).$_FILES[$imgRequset]['name'];
   $imageTmp = $_FILES[$imgRequset]['tmp_name'];
   $imageSize = $_FILES[$imgRequset]['size'];
   $allowExt = array("jpg","png","pdf","mp3");
@@ -23,10 +23,17 @@ function imageUpload ($imgRequset){
 
   }
   if(empty($errorMsg)) {
-  move_uploaded_file($imageTmp,"upload/".$imagename);
+  move_uploaded_file($imageTmp,"../upload/".$imagename);
+  return $imagename;
+
   }
   else {
-    echo "$imagename";
+    return "fail";
+  }
+}
+function deleteFile($dir ,  $imagename){
+  if(file_exists($dir."/".$imagename)){
+    unlink($dir."/".$imagename);
   }
 }
 
