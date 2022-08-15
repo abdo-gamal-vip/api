@@ -7,6 +7,7 @@ $n_id  = filterRequest("n_id");
 
 
 
+
 $stmt = $conct->prepare("UPDATE `notes` SET `n_title`=?,`n_content`=? WHERE n_id = ?");
 $stmt->execute(array($title , $content , $n_id));
 $count = $stmt->rowCount();
