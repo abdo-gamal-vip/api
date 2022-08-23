@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 $fileName ="images.txt";
 $texttoarray =explode(".", $fileName);
 $ext =end($texttoarray);
@@ -14,3 +15,9 @@ if(in_array($ext , $allowtext)){
     print "no";
 }
 ?>
+=======
+include "connect.php";
+imageUpload('file');
+if($imagename != "fail")
+?> 
+>>>>>>> 91b80e63be74ba1b6ce26677e074402204bc3f8f
